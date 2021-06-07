@@ -43,7 +43,7 @@ int				ft_atoi_base(char *str, char *base);
 /*
 ** int to ascii (or reverse)
 */
-long				ft_atoi(const char *str);
+long			ft_atoi(const char *str);
 char			*ft_itoa(int nb);
 char			*ft_itoa_base(long long int nb, char *base);
 

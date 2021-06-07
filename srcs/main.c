@@ -8,8 +8,12 @@ int	error(void)
 
 int	main(int argc, char **argv)
 {
+	t_stacks	stacks;
+
+	stacks.stack_a = malloc(argc);
+	stacks.stack_b = malloc(argc);
 	if (argc == 1)
 		return (1);
-	if (parsing(argc, argv))
+	if (parsing(argc, argv, stacks))
 		return (error());
 }
