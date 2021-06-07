@@ -16,6 +16,7 @@ int	main(int argc, char **argv)
 		return (1);
 	if (argc == 2)
 		argv = single_arg_operations(&argc, argv);
+	printf("argv[0] = %s\n", argv[0]);
 	if (parsing(argc, argv, stacks))
 		return (error());
 }
