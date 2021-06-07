@@ -48,12 +48,6 @@ void	fill_stack(int argc, char **argv, t_stacks stacks)
 		i++;
 		j++;
 	}
-	j = 0;
-	while (j < argc - 1)
-	{
-		printf("%d\n", stacks.stack_a[j]);
-		j++;
-	}
 }
 //check dupplicates numbers
 int		check_double(int argc, t_stacks stacks)
@@ -67,7 +61,6 @@ int		check_double(int argc, t_stacks stacks)
 		j = i + 1;
 		while (j < argc - 1)
 		{
-			printf("%d -- %d\n", stacks.stack_a[i], stacks.stack_a[j]);
 			if (stacks.stack_a[i] == stacks.stack_a[j])
 				return (1);
 			j++;

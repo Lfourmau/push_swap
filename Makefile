@@ -2,6 +2,7 @@ NAME = push_swap
 
 SRCS = 	srcs/main.c \
 		srcs/parsing/parsing.c \
+		srcs/parsing/single_string_arg.c \
 
 OBJS = $(SRCS:.c=.o)
 

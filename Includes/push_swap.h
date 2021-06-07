@@ -16,5 +16,6 @@ typedef struct s_stacks
 
 int	parsing(int argc, char **argv, t_stacks stacks);
 int	full_digits_check(int argc, char **argv);
+char **single_arg_operations(int *argc, char **argv);
 
 #endif
