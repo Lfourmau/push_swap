@@ -41,7 +41,7 @@ void	fill_stack(int argc, char **argv, t_stacks stacks, int start)
 
 	i = start;
 	j = 0;
-	while (i <= argc)
+	while (i < argc)
 	{
 		if (argv[i])
 			stacks.stack_a[j] = ft_atoi(argv[i]);
@@ -50,18 +50,20 @@ void	fill_stack(int argc, char **argv, t_stacks stacks, int start)
 	}
 }
 //check dupplicates numbers
-int		check_double(int argc, t_stacks stacks)
+int		check_double(int argc, t_stacks stacks, int start)
 {
 	int i;
 	int j;
 	
 	i = 0;
+	if (start == 1)
+		argc = argc - 1;
 	while (i < argc)
 	{
 		j = i + 1;
 		while (j < argc)
 		{
-			printf("%d -- %d\n", stacks.stack_a[i], stacks.stack_a[j]);
+			//printf("%d -- %d\n", stacks.stack_a[i], stacks.stack_a[j]);
 			if (stacks.stack_a[i] == stacks.stack_a[j])
 				return (1);
 			j++;
@@ -71,8 +73,10 @@ int		check_double(int argc, t_stacks stacks)
 	return (0);
 }
 
-int	parsing(int argc, char **argv, t_stacks stacks, int start)
+int	parsing(int argc, char **argv, t_stacks stacks)
 {
+	int start = 1;
+	int i = 0;
 	if (argc == 1)
 		return (1);
 	if (argc == 2)
@@ -80,14 +84,18 @@ int	parsing(int argc, char **argv, t_stacks stacks, int start)
 		start = 0;
 		argv = single_arg_operations(&argc, argv);
 	}
-	else
-		argc = argc - 1;
 	if (full_digits_check(argc, argv, start))
 		return (1);
 	if (int_check(argc, argv, start))
 		return (1);
 	fill_stack(argc, argv, stacks, start);
-	if (check_double(argc, stacks))
+	if (check_double(argc, stacks, start))
 		return (1);
+	
+	while (i < argc - 1)
+	{
+		printf("%d\n", stacks.stack_a[i]);
+		i++;
+	}
 	return (0);
 }

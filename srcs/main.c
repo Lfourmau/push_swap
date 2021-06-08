@@ -9,11 +9,9 @@ int	error(void)
 int	main(int argc, char **argv)
 {
 	t_stacks	stacks;
-	int start;
 
 	stacks.stack_a = malloc(argc);
 	stacks.stack_b = malloc(argc);
-	start = 1;
-	if (parsing(argc, argv, stacks, start))
+	if (parsing(argc, argv, stacks))
 		return (error());
 }
