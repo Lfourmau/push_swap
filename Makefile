@@ -3,12 +3,13 @@ NAME = push_swap
 SRCS = 	srcs/main.c \
 		srcs/parsing/parsing.c \
 		srcs/parsing/single_string_arg.c \
+		srcs/free_fct/free_funcs.c \
 
 OBJS = $(SRCS:.c=.o)
 
 LIBS = libft.a
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = #-Wall -Wextra -Werror
 
 all : $(NAME)
 

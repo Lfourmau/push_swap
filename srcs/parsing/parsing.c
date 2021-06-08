@@ -14,7 +14,11 @@ int	full_digits_check(int argc, char **argv, int start)
 		while (argv[i][j] && ft_isdigit(argv[i][j]))
 			j++;
 		if (argv[i][j])
+		{
+			if (start == 0)
+				free_splits(argv, argc);
 			return (1);
+		}
 		i++;
 	}
 	return (0);
@@ -28,7 +32,11 @@ int	int_check(int argc, char **argv, int start)
 	while (i < argc)
 	{
 		if (ft_atoi(argv[i]) > INT_MAX || ft_atoi(argv[i]) < INT_MIN)
+		{
+			if (start == 0)
+				free_splits(argv, argc);
 			return (1);
+		}
 		i++;
 	}
 	return (0);
@@ -48,6 +56,8 @@ void	fill_stack(int argc, char **argv, t_stacks *stacks, int start)
 		i++;
 		j++;
 	}
+	if (start == 0)
+		free_splits(argv, argc);
 }
 //check dupplicates numbers
 int		check_double(int argc, t_stacks *stacks, int start)
@@ -74,7 +84,10 @@ int		check_double(int argc, t_stacks *stacks, int start)
 
 int	parsing(int argc, char **argv, t_stacks *stacks)
 {
-	int start = 1;
+	char **tmp;
+	int start;
+
+	start = 1;
 	if (argc == 1)
 		return (1);
 	if (argc == 2)

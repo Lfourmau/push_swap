@@ -11,7 +11,7 @@ int number_splits(char **split)
         i++;
     return (i);
 }
-//split the argument, and put an element a the begin of the array to reproduce argv behavior
+
 char **split_arg(char *str)
 {
     char **res;

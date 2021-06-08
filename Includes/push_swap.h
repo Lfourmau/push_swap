@@ -14,8 +14,10 @@ typedef struct s_stacks
 	int	*stack_b;
 }	t_stacks;
 
-int	parsing(int argc, char **argv, t_stacks *stacks);
-int	full_digits_check(int argc, char **argv, int start);
-char **single_arg_operations(int *argc, char **argv);
+int		parsing(int argc, char **argv, t_stacks *stacks);
+int		full_digits_check(int argc, char **argv, int start);
+char 	**single_arg_operations(int *argc, char **argv);
+void	free_splits(char **chain, int i);
+int 	free_exit(t_stacks *stacks ,char **argv);
 
 #endif
