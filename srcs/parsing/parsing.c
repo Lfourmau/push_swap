@@ -63,7 +63,6 @@ int		check_double(int argc, t_stacks stacks, int start)
 		j = i + 1;
 		while (j < argc)
 		{
-			//printf("%d -- %d\n", stacks.stack_a[i], stacks.stack_a[j]);
 			if (stacks.stack_a[i] == stacks.stack_a[j])
 				return (1);
 			j++;
@@ -76,7 +75,6 @@ int		check_double(int argc, t_stacks stacks, int start)
 int	parsing(int argc, char **argv, t_stacks stacks)
 {
 	int start = 1;
-	int i = 0;
 	if (argc == 1)
 		return (1);
 	if (argc == 2)
@@ -91,11 +89,5 @@ int	parsing(int argc, char **argv, t_stacks stacks)
 	fill_stack(argc, argv, stacks, start);
 	if (check_double(argc, stacks, start))
 		return (1);
-	
-	while (i < argc - 1)
-	{
-		printf("%d\n", stacks.stack_a[i]);
-		i++;
-	}
 	return (0);
 }
