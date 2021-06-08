@@ -14,15 +14,6 @@ int	main(int argc, char **argv)
 	stacks.stack_a = malloc(argc);
 	stacks.stack_b = malloc(argc);
 	start = 1;
-	if (argc == 1)
-		return (1);
-	if (argc == 2)
-	{
-		start = 0;
-		argv = single_arg_operations(&argc, argv);
-	}
-	else
-		argc = argc - 1;
 	if (parsing(argc, argv, stacks, start))
 		return (error());
 }

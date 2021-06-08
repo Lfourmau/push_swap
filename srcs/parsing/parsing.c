@@ -73,6 +73,15 @@ int		check_double(int argc, t_stacks stacks)
 
 int	parsing(int argc, char **argv, t_stacks stacks, int start)
 {
+	if (argc == 1)
+		return (1);
+	if (argc == 2)
+	{
+		start = 0;
+		argv = single_arg_operations(&argc, argv);
+	}
+	else
+		argc = argc - 1;
 	if (full_digits_check(argc, argv, start))
 		return (1);
 	if (int_check(argc, argv, start))
