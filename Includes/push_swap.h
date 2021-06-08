@@ -25,4 +25,8 @@ void	free_splits(char **chain, int i);
 int		free_exit(t_stacks *stacks);
 int		malloc_stacks(t_stacks *stacks, int start, int argc);
 
+//SWAP FUNCS
+void	sa(t_stacks *stacks);
+void   	sb(t_stacks *stacks);
+
 #endif
