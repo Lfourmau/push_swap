@@ -1,11 +1,11 @@
 #include "../../Includes/push_swap.h"
 //check there is no letters in args
-int	full_digits_check(int argc, char **argv)
+int	full_digits_check(int argc, char **argv, int start)
 {
 	int	i;
 	int	j;
 
-	i = 1;
+	i = start;
 	while (i < argc)
 	{
 		j = 0;
@@ -20,11 +20,11 @@ int	full_digits_check(int argc, char **argv)
 	return (0);
 }
 //check numbers are good with int type
-int	int_check(int argc, char **argv)
+int	int_check(int argc, char **argv, int start)
 {
 	int	i;
 
-	i = 1;
+	i = start;
 	while (i < argc)
 	{
 		if (ft_atoi(argv[i]) > INT_MAX || ft_atoi(argv[i]) < INT_MIN)
@@ -33,15 +33,15 @@ int	int_check(int argc, char **argv)
 	}
 	return (0);
 }
-//fill a array
-void	fill_stack(int argc, char **argv, t_stacks stacks)
+//fill A array
+void	fill_stack(int argc, char **argv, t_stacks stacks, int start)
 {
 	int	i;
 	int	j;
 
-	i = 1;
+	i = start;
 	j = 0;
-	while (i < argc)
+	while (i <= argc)
 	{
 		if (argv[i])
 			stacks.stack_a[j] = ft_atoi(argv[i]);
@@ -56,11 +56,12 @@ int		check_double(int argc, t_stacks stacks)
 	int j;
 	
 	i = 0;
-	while (i < argc - 1)
+	while (i < argc)
 	{
 		j = i + 1;
-		while (j < argc - 1)
+		while (j < argc)
 		{
+			printf("%d -- %d\n", stacks.stack_a[i], stacks.stack_a[j]);
 			if (stacks.stack_a[i] == stacks.stack_a[j])
 				return (1);
 			j++;
@@ -70,13 +71,13 @@ int		check_double(int argc, t_stacks stacks)
 	return (0);
 }
 
-int	parsing(int argc, char **argv, t_stacks stacks)
+int	parsing(int argc, char **argv, t_stacks stacks, int start)
 {
-	if (full_digits_check(argc, argv))
+	if (full_digits_check(argc, argv, start))
 		return (1);
-	if (int_check(argc, argv))
+	if (int_check(argc, argv, start))
 		return (1);
-	fill_stack(argc, argv, stacks);
+	fill_stack(argc, argv, stacks, start);
 	if (check_double(argc, stacks))
 		return (1);
 	return (0);

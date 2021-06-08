@@ -1,2 +1,2 @@
-Avec le $ARG, les operations commencnent a l'index 1 (comme pour le parsing classique qui doit sauter le nom du prog), mais il faut qu'il parte a 0
-Le programme n'affiche pas d'erreur quand on met uniquement des lettres -> ./push_swap oubidou fonctionne par ex
+Avec le $ARG, les operations commencnent a l'index 1 (comme pour le parsing classique qui doit sauter le nom du prog), mais il faut qu'il parte a 0         /V\
+Le programme n'affiche pas d'erreur quand on met uniquement des lettres -> ./push_swap oubidou fonctionne par ex                                            /V\
