@@ -1,1 +1,2 @@
 Le malloc des stacks s'efefctue avant les operations sur argc, dont si on a $ARG le malloc est de seulement 2 ?
+./push_swap - fonctionne ce n'est pas normal :(

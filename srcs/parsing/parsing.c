@@ -34,7 +34,7 @@ int	int_check(int argc, char **argv, int start)
 	return (0);
 }
 //fill A array
-void	fill_stack(int argc, char **argv, t_stacks stacks, int start)
+void	fill_stack(int argc, char **argv, t_stacks *stacks, int start)
 {
 	int	i;
 	int	j;
@@ -44,13 +44,13 @@ void	fill_stack(int argc, char **argv, t_stacks stacks, int start)
 	while (i < argc)
 	{
 		if (argv[i])
-			stacks.stack_a[j] = ft_atoi(argv[i]);
+			stacks->stack_a[j] = ft_atoi(argv[i]);
 		i++;
 		j++;
 	}
 }
 //check dupplicates numbers
-int		check_double(int argc, t_stacks stacks, int start)
+int		check_double(int argc, t_stacks *stacks, int start)
 {
 	int i;
 	int j;
@@ -63,7 +63,7 @@ int		check_double(int argc, t_stacks stacks, int start)
 		j = i + 1;
 		while (j < argc)
 		{
-			if (stacks.stack_a[i] == stacks.stack_a[j])
+			if (stacks->stack_a[i] == stacks->stack_a[j])
 				return (1);
 			j++;
 		}
@@ -72,7 +72,7 @@ int		check_double(int argc, t_stacks stacks, int start)
 	return (0);
 }
 
-int	parsing(int argc, char **argv, t_stacks stacks)
+int	parsing(int argc, char **argv, t_stacks *stacks)
 {
 	int start = 1;
 	if (argc == 1)
@@ -82,6 +82,8 @@ int	parsing(int argc, char **argv, t_stacks stacks)
 		start = 0;
 		argv = single_arg_operations(&argc, argv);
 	}
+	stacks->stack_a = malloc(argc);
+	stacks->stack_b = malloc(argc);
 	if (full_digits_check(argc, argv, start))
 		return (1);
 	if (int_check(argc, argv, start))
