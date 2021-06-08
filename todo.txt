@@ -1,2 +1,2 @@
-Le malloc des stacks s'efefctue avant les operations sur argc, dont si on a $ARG le malloc est de seulement 2 ?
+On malloc argc octets pour les stakcs, or avec le ./ on a 1 de plus en argc. Peut etre que je malloc 1 de trop dans ce cas la, come le nom du prog n'est pas dans la stack.
 ./push_swap - fonctionne ce n'est pas normal :(
