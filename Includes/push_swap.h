@@ -12,12 +12,16 @@ typedef struct s_stacks
 {
 	int	*stack_a;
 	int	*stack_b;
+	int	max_index;
 }	t_stacks;
 
+//PARSING FUNCS
 int		parsing(int argc, char **argv, t_stacks *stacks);
 int		full_digits_check(int argc, char **argv, int start);
-char 	**single_arg_operations(int *argc, char **argv);
+char	**single_arg_operations(int *argc, char **argv);
+
+//FREE FUNCS
 void	free_splits(char **chain, int i);
-int 	free_exit(t_stacks *stacks ,char **argv);
+int		free_exit(t_stacks *stacks);
 
 #endif

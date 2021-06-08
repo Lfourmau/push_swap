@@ -4,6 +4,7 @@ SRCS = 	srcs/main.c \
 		srcs/parsing/parsing.c \
 		srcs/parsing/single_string_arg.c \
 		srcs/free_fct/free_funcs.c \
+		srcs/swap/swap_fct.c \
 
 OBJS = $(SRCS:.c=.o)
 

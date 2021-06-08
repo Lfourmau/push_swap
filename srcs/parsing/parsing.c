@@ -1,4 +1,5 @@
 #include "../../Includes/push_swap.h"
+
 //check there is no letters in args
 int	full_digits_check(int argc, char **argv, int start)
 {
@@ -23,6 +24,7 @@ int	full_digits_check(int argc, char **argv, int start)
 	}
 	return (0);
 }
+
 //check numbers are good with int type
 int	int_check(int argc, char **argv, int start)
 {
@@ -41,6 +43,7 @@ int	int_check(int argc, char **argv, int start)
 	}
 	return (0);
 }
+
 //fill A array
 void	fill_stack(int argc, char **argv, t_stacks *stacks, int start)
 {
@@ -59,12 +62,13 @@ void	fill_stack(int argc, char **argv, t_stacks *stacks, int start)
 	if (start == 0)
 		free_splits(argv, argc);
 }
+
 //check dupplicates numbers
-int		check_double(int argc, t_stacks *stacks, int start)
+int	check_double(int argc, t_stacks *stacks, int start)
 {
-	int i;
-	int j;
-	
+	int	i;
+	int	j;
+
 	i = 0;
 	if (start == 1)
 		argc = argc - 1;
@@ -84,8 +88,8 @@ int		check_double(int argc, t_stacks *stacks, int start)
 
 int	parsing(int argc, char **argv, t_stacks *stacks)
 {
-	char **tmp;
-	int start;
+	char	**tmp;
+	int		start;
 
 	start = 1;
 	if (argc == 1)
@@ -104,5 +108,9 @@ int	parsing(int argc, char **argv, t_stacks *stacks)
 	fill_stack(argc, argv, stacks, start);
 	if (check_double(argc, stacks, start))
 		return (1);
+	if (start == 0)
+		stacks->max_index = argc - 1;
+	else if (start == 1)
+		stacks->max_index = argc - 2;
 	return (0);
 }

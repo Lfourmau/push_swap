@@ -7,7 +7,7 @@ void	free_splits(char **chain, int i)
 	free(chain);
 }
 
-int free_exit(t_stacks *stacks ,char **argv)
+int	free_exit(t_stacks *stacks)
 {
 	free(stacks->stack_a);
 	free(stacks->stack_b);
