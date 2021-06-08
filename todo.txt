@@ -8,3 +8,5 @@ Soucis avec SA -> Quand on met une seule valeur, le swap donne n'importe quoi :
 1610612736
 //////////////
 PROTECTION MALLOCS
+//////////////
+Fix la copie de a dans b qui est assez aleatoir (ou comprendre pourquoi ca fonctionne avec maxindex + 2 * 16 dans le memcpy)
