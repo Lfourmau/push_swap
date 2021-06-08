@@ -99,8 +99,8 @@ int	parsing(int argc, char **argv, t_stacks *stacks)
 		start = 0;
 		argv = single_arg_operations(&argc, argv);
 	}
-	stacks->stack_a = malloc(argc);
-	stacks->stack_b = malloc(argc);
+	if (malloc_stacks(stacks, start, argc))
+		return (1);
 	if (full_digits_check(argc, argv, start))
 		return (1);
 	if (int_check(argc, argv, start))

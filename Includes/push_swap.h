@@ -20,8 +20,9 @@ int		parsing(int argc, char **argv, t_stacks *stacks);
 int		full_digits_check(int argc, char **argv, int start);
 char	**single_arg_operations(int *argc, char **argv);
 
-//FREE FUNCS
+//FREE/MALLOC FUNCS
 void	free_splits(char **chain, int i);
 int		free_exit(t_stacks *stacks);
+int		malloc_stacks(t_stacks *stacks, int start, int argc);
 
 #endif

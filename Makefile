@@ -3,7 +3,8 @@ NAME = push_swap
 SRCS = 	srcs/main.c \
 		srcs/parsing/parsing.c \
 		srcs/parsing/single_string_arg.c \
-		srcs/free_fct/free_funcs.c \
+		srcs/memory_fct/free_funcs.c \
+		srcs/memory_fct/malloc_fct.c \
 		srcs/swap/swap_fct.c \
 
 OBJS = $(SRCS:.c=.o)
