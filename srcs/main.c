@@ -9,7 +9,7 @@ int	error(void)
 int	main(int argc, char **argv)
 {
 	t_stacks	stacks;
-	int i;
+	int			i;
 
 	if (parsing(argc, argv, &stacks))
 		return (error());

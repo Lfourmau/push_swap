@@ -25,6 +25,12 @@ int		parsing(int argc, char **argv, t_stacks *stacks);
 int		full_digits_check(int argc, char **argv, int start);
 char	**single_arg_operations(int *argc, char **argv);
 
+//ARRAY MANIPS
+int		add_front_slot(t_onestack *stack, int value);
+int		del_front_value(t_onestack *stack);
+int		del_back_value(t_onestack *stack);
+int		add_back_slot(t_onestack *stack, int value);
+
 //MEMORY FUNCS
 void	free_splits(char **chain, int i);
 int		free_exit(t_stacks *stacks);
@@ -39,10 +45,6 @@ void   	sb(t_stacks *stacks);
 void    ss(t_stacks *stacks);
 
 //PUSH FUNCS
-int		add_front_slot(t_onestack *stack, int value);
-int		del_front_value(t_onestack *stack);
-int		del_back_value(t_onestack *stack);
-int		add_back_slot(t_onestack *stack, int value);
 int    	pa(t_stacks *stacks);
 int    	pb(t_stacks *stacks);
 
