@@ -5,6 +5,7 @@ SRCS = 	srcs/main.c \
 		srcs/parsing/single_string_arg.c \
 		srcs/memory_fct/free_funcs.c \
 		srcs/memory_fct/malloc_fct.c \
+		srcs/memory_fct/copy_funcs.c \
 		srcs/swap/swap_fct.c \
 
 OBJS = $(SRCS:.c=.o)

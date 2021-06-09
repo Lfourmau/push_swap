@@ -25,10 +25,12 @@ int		parsing(int argc, char **argv, t_stacks *stacks);
 int		full_digits_check(int argc, char **argv, int start);
 char	**single_arg_operations(int *argc, char **argv);
 
-//FREE/MALLOC FUNCS
+//MEMORY FUNCS
 void	free_splits(char **chain, int i);
 int		free_exit(t_stacks *stacks);
 int		malloc_stacks(t_stacks *stacks, int start, int argc);
+void	stack_a_to_b(t_stacks *stacks);
+void	stack_b_to_a(t_stacks *stacks);
 
 //SWAP FUNCS
 void	sa(t_stacks *stacks);
