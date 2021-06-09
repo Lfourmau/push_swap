@@ -8,8 +8,9 @@ SRCS = 	srcs/main.c \
 		srcs/memory_fct/copy_funcs.c \
 		srcs/swap/swap_fct.c \
 		srcs/push/push_fct.c \
-		srcs/push/push_fct_utils.c \
 		srcs/rotate/rotate_funcs.c \
+		srcs/manip_array/manip_array.c \
+		srcs/reverse_rotate/reverse_rotate_fct.c \
 
 OBJS = $(SRCS:.c=.o)
 

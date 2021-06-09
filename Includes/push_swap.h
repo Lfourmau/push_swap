@@ -41,6 +41,7 @@ void    ss(t_stacks *stacks);
 //PUSH FUNCS
 int		add_front_slot(t_onestack *stack, int value);
 int		del_front_value(t_onestack *stack);
+int		del_back_value(t_onestack *stack);
 int		add_back_slot(t_onestack *stack, int value);
 int    	pa(t_stacks *stacks);
 int    	pb(t_stacks *stacks);
@@ -49,5 +50,10 @@ int    	pb(t_stacks *stacks);
 int 	ra(t_stacks *stacks);
 int		rb(t_stacks *stacks);
 int 	rr(t_stacks *stacks);
+
+//REVERSE ROTATE FUNCS
+int		rra(t_stacks *stacks);
+int 	rrb(t_stacks *stacks);
+int 	rrr(t_stacks *stacks);
 
 #endif
