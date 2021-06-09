@@ -7,6 +7,9 @@ SRCS = 	srcs/main.c \
 		srcs/memory_fct/malloc_fct.c \
 		srcs/memory_fct/copy_funcs.c \
 		srcs/swap/swap_fct.c \
+		srcs/push/push_fct.c \
+		srcs/push/push_fct_utils.c \
+		srcs/rotate/rotate_funcs.c \
 
 OBJS = $(SRCS:.c=.o)
 

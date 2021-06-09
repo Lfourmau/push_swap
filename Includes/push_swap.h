@@ -31,10 +31,17 @@ int		free_exit(t_stacks *stacks);
 int		malloc_stacks(t_stacks *stacks, int start, int argc);
 void	stack_a_to_b(t_stacks *stacks);
 void	stack_b_to_a(t_stacks *stacks);
+void	copy_tab(int *dest, int *src, int start_src, int maxindex, int start_dst);
 
 //SWAP FUNCS
 void	sa(t_stacks *stacks);
 void   	sb(t_stacks *stacks);
 void    ss(t_stacks *stacks);
+
+//PUSH FUNCS
+int		add_front_slot(t_onestack *stack, int value);
+int		del_front_value(t_onestack *stack);
+int    	pa(t_stacks *stacks);
+int    	pb(t_stacks *stacks);
 
 #endif
