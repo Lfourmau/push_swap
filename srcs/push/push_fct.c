@@ -2,7 +2,6 @@
 
 int    pa(t_stacks *stacks)
 {
-	int i = 0;
     if (stacks->stack_b.max_index != -1)
     {
 			if (add_front_slot(&stacks->stack_a, stacks->stack_b.stack[0]) == 1)
@@ -15,7 +14,6 @@ int    pa(t_stacks *stacks)
 
 int    pb(t_stacks *stacks)
 {
-	int i = 0;
     if (stacks->stack_a.max_index != -1)
     {
 			if (add_front_slot(&stacks->stack_b, stacks->stack_a.stack[0]) == 1)
