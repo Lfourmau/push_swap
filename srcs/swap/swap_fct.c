@@ -23,3 +23,9 @@ void    sb(t_stacks *stacks)
        stacks->stack_b.stack[stacks->stack_b.max_index - 1] = tmp;
     }
 }
+
+void    ss(t_stacks *stacks)
+{
+    sa(stacks);
+    sb(stacks);
+}

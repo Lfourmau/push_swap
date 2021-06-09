@@ -13,6 +13,6 @@ int	main(int argc, char **argv)
 
 	if (parsing(argc, argv, &stacks))
 		return (error());
-	
+
 	// free_exit(stacks); necessaire pour regler les 3 derniers leaks, mais dit qu'on modifie un evaleur apres l'avoir free.
 }

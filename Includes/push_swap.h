@@ -35,5 +35,6 @@ void	stack_b_to_a(t_stacks *stacks);
 //SWAP FUNCS
 void	sa(t_stacks *stacks);
 void   	sb(t_stacks *stacks);
+void    ss(t_stacks *stacks);
 
 #endif
