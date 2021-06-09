@@ -39,7 +39,6 @@ int	del_front_value(t_onestack *stack)
 		return (1);
 	copy_tab(tmp, stack->stack, 0, stack->max_index, 1);
 	stack->max_index--;
-	printf("heyheyhey\n");
 	//free(stack->stack); sinon segfault quand on appelle RB apres RA dans le main
 	stack->stack = tmp;
 	return (0);
