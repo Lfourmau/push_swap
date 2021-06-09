@@ -8,11 +8,16 @@
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
 
+typedef struct s_onestack
+{
+	int	*stack;
+	int	max_index;
+}	t_onestack;
+
 typedef struct s_stacks
 {
-	int	*stack_a;
-	int	*stack_b;
-	int	max_index;
+	t_onestack stack_a;
+	t_onestack stack_b;
 }	t_stacks;
 
 //PARSING FUNCS

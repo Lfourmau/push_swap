@@ -55,7 +55,7 @@ void	fill_stack(int argc, char **argv, t_stacks *stacks, int start)
 	while (i < argc)
 	{
 		if (argv[i])
-			stacks->stack_a[j] = ft_atoi(argv[i]);
+			stacks->stack_a.stack[j] = ft_atoi(argv[i]);
 		i++;
 		j++;
 	}
@@ -77,7 +77,7 @@ int	check_double(int argc, t_stacks *stacks, int start)
 		j = i + 1;
 		while (j < argc)
 		{
-			if (stacks->stack_a[i] == stacks->stack_a[j])
+			if (stacks->stack_a.stack[i] == stacks->stack_a.stack[j])
 				return (1);
 			j++;
 		}
@@ -109,8 +109,8 @@ int	parsing(int argc, char **argv, t_stacks *stacks)
 	if (check_double(argc, stacks, start))
 		return (1);
 	if (start == 0)
-		stacks->max_index = argc - 1;
+		stacks->stack_a.max_index = argc - 1;
 	else if (start == 1)
-		stacks->max_index = argc - 2;
+		stacks->stack_a.max_index = argc - 2;
 	return (0);
 }

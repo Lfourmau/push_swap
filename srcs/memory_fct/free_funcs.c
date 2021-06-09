@@ -9,8 +9,8 @@ void	free_splits(char **chain, int i)
 
 int	free_exit(t_stacks *stacks)
 {
-	free(stacks->stack_a);
-	free(stacks->stack_b);
+	free(stacks->stack_a.stack);
+	free(stacks->stack_b.stack);
 	free(stacks);
 	return (0);
 }
