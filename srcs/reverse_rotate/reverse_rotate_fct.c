@@ -20,9 +20,7 @@ int rrb(t_stacks *stacks)
 
 int rrr(t_stacks *stacks)
 {
-    if (rrb(stacks))
-		return (1);
-	if (rra(stacks))
-		return (1);
+	if (rra(stacks) || rrb(stacks))
+        return (1);
     return (0);
 }

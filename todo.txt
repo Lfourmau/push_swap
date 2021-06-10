@@ -1,13 +1,9 @@
 ./push_swap '-' fonctionne ce n'est pas normal
 /////////////
-Soucis avec SA -> Quand on met une seule valeur, le swap donne n'importe quoi : 
-
-./push_swap 1 
-1
---------- (appel de SA)
-1610612736
-//////////////
 PROTECTION MALLOCS
 //////////////
 fonction copy_tab a 5 arguments donc 1 de trop -> peut etre remplacer le maxindex car il n'y a qie dans del_back qu'on change avec maxindex-1. on pourrait lui envoyer juste stack au lien de stack ET max index ?
 //////
+avec rr PARFOIS, la stack a quand elle print avant b ne marche pas. La derniere valeur prend celle de la premiere mais rien ne se décale.
+//
+Malloc maxindex - 1 dans les del back -> pq le -1 ? On enleve juste une valeur donc juste maxindex car index = nb de val - 1?
