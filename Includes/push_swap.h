@@ -37,7 +37,7 @@ int		free_exit(t_stacks *stacks);
 int		malloc_stacks(t_stacks *stacks, int start, int argc);
 void	stack_a_to_b(t_stacks *stacks);
 void	stack_b_to_a(t_stacks *stacks);
-void	copy_tab(int *dest, int *src, int start_src, int maxindex, int start_dst);
+void	copy_tab(int *dest, t_onestack *stack, int start_dst, int start_src);
 
 //SWAP FUNCS
 void	sa(t_stacks *stacks);

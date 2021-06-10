@@ -26,16 +26,16 @@ void	stack_b_to_a(t_stacks *stacks)
 	stacks->stack_a.max_index = stacks->stack_b.max_index;
 }
 
-void	copy_tab(int *dest, int *src, int start_dst, int maxindex, int start_src)
+void	copy_tab(int *dest, t_onestack *stack, int start_dst, int start_src)
 {
 	int	i;
 	int	j;
 
 	i = start_dst;
 	j = start_src;
-	while (j <= maxindex)
+	while (j <= stack->max_index)
 	{
-		dest[i] = src[j];
+		dest[i] = stack->stack[j];
 		i++;
 		j++;
 	}

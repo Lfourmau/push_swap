@@ -8,7 +8,7 @@ int	add_front_slot(t_onestack *stack, int value)
 	if (tmp == NULL)
 		return (1);
 	tmp[0] = value;
-	copy_tab(tmp, stack->stack, 1, stack->max_index, 0);
+	copy_tab(tmp, stack, 1, 0);
 	stack->max_index++;
 	//free(stack->stack);
 	stack->stack = tmp;
@@ -23,7 +23,7 @@ int	add_back_slot(t_onestack *stack, int value)
 	if (tmp == NULL)
 		return (1);
 	tmp[stack->max_index + 1] = value;
-	copy_tab(tmp, stack->stack, 0, stack->max_index, 0);
+	copy_tab(tmp, stack, 0, 0);
 	stack->max_index++;
 	//free(stack->stack);
 	stack->stack = tmp;
@@ -37,7 +37,7 @@ int	del_front_value(t_onestack *stack)
 	tmp = malloc((stack->max_index) * sizeof(int));
 	if (tmp == NULL)
 		return (1);
-	copy_tab(tmp, stack->stack, 0, stack->max_index, 1);
+	copy_tab(tmp, stack, 0, 1);
 	stack->max_index--;
 	//free(stack->stack); sinon segfault quand on appelle RB apres RA dans le main
 	stack->stack = tmp;
@@ -47,12 +47,12 @@ int	del_front_value(t_onestack *stack)
 int	del_back_value(t_onestack *stack)
 {
 	int	*tmp;
-
+	//in this case, i decrémente maxindex BEFOR copy_tab because i don't want to copy the last value, it will be deleted.
 	tmp = malloc((stack->max_index) * sizeof(int));
 	if (tmp == NULL)
 		return (1);
-	copy_tab(tmp, stack->stack, 0, stack->max_index - 1, 0);
 	stack->max_index--;
+	copy_tab(tmp, stack, 0, 0);
 	//free(stack->stack); sinon segfault quand on appelle RB apres RA dans le main
 	stack->stack = tmp;
 	return (0);
