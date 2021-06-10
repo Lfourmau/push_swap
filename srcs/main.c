@@ -14,8 +14,11 @@ int	main(int argc, char **argv)
 	if (parsing(argc, argv, &stacks))
 		return (error());
 
+	pb(&stacks);
+	pb(&stacks);
+	pb(&stacks);
 	i = 0;
-	printf("\033[0;31mfirst print of A stack\n\033[0m");
+	printf("\033[0;31mA after 3 pb\n\033[0m");
 	while (i <= stacks.stack_a.max_index)
 	{
 		printf("{%d} --", stacks.stack_a.stack[i]);
@@ -23,10 +26,8 @@ int	main(int argc, char **argv)
 	}
 	printf("\n");
 
-	stack_a_to_b(&stacks);
-
 	i = 0;
-	printf("\033[0;31mStack b after the copy from a\n\033[0m");
+	printf("\033[0;31mStack b after 3 pb\n\033[0m");
 	while (i <= stacks.stack_b.max_index)
 	{
 		printf("{%d} --", stacks.stack_b.stack[i]);
