@@ -27,7 +27,7 @@ int run_top(t_onestack stack, int min, int max)
  	return (-1);
  }
 
- int	closer_number(t_stacks *stacks, int min, int max)
+ int	closer_number_a(t_stacks *stacks, int min, int max)
  {
  	//find the closest side and do ra or rra X times to put the nb at the top
  	int top;
@@ -62,11 +62,10 @@ int run_top(t_onestack stack, int min, int max)
      i = 0;
      min = 0;
      max = size_packs(nb_elements);
-     printf("nbpacks : %d -- size : %d\n", nb_packs(nb_elements), max);
+	 printf("nb packs : %d -- size : %d\n\n", nb_packs(nb_elements), max);
      while (i <= nb_packs(nb_elements))
      {
-         printf("%d -- %d\n", min, max);
-         while (closer_number(stacks, min, max) != 1)
+         while (closer_number_a(stacks, min, max) != 1)
              pb(stacks);
          min = max + 1;
          max = min + size_packs(nb_elements);

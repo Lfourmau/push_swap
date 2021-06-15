@@ -1,6 +1,6 @@
 #include "../../Includes/push_swap.h"
 
-int replace(t_onestack *stack, int *sorted_tab)
+void replace(t_onestack *stack, int *sorted_tab)
 {
     int i;
 	int j;
@@ -33,5 +33,5 @@ int replace_values(t_onestack *stack)
 	copy_tab(sorted_tab, stack, 0, 0);
 	sort_tab(sorted_tab, stack->max_index + 1);
 	replace(stack, sorted_tab);
-    return (0);
+	return (0);
 }
