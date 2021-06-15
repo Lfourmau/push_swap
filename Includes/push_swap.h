@@ -67,9 +67,5 @@ int		sorting_stack(t_stacks *stacks);
 //PACKS
 int		my_sqrt(int nb_elements);
 int		nb_packs(int nb_elements);
-int		size_packs(int nb_elements);
 
-//COMPARE
-int	closer_number(t_stacks *stacks, int min, int max);
-int 	push_packs(t_stacks *stacks);
 #endif

@@ -13,10 +13,9 @@ int	main(int argc, char **argv)
 
 	if (parsing(argc, argv, &stacks))
 		return (error());
-	push_packs(&stacks);
-	while (i <= stacks.stack_b.max_index)
+	while (i <= stacks.stack_a.max_index)
 	{
-		printf("[%d]\n",stacks.stack_b.stack[i]);
+		printf("%d\n", stacks.stack_a.stack[i]);
 		i++;
 	}
 	// free_exit(stacks); necessaire pour regler les 3 derniers leaks, mais dit qu'on modifie une valeur apres l'avoir free.

@@ -6,7 +6,7 @@ int rra(t_stacks *stacks)
         return (1);
     if (del_back_value(&stacks->stack_a))
         return (1);
-    printf("rra\n");
+     printf("rra\n");
     return (0);
 }
 
@@ -16,7 +16,7 @@ int rrb(t_stacks *stacks)
         return (1);
     if (del_back_value(&stacks->stack_b))
         return (1);
-    printf("rrb\n");
+     printf("rrb\n");
     return (0);
 }
 
