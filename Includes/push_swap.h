@@ -41,12 +41,12 @@ void	copy_tab(int *dest, t_onestack *stack, int start_dst, int start_src);
 
 //SWAP FUNCS
 void	sa(t_stacks *stacks);
-void   	sb(t_stacks *stacks);
-void    ss(t_stacks *stacks);
+void	sb(t_stacks *stacks);
+void	ss(t_stacks *stacks);
 
 //PUSH FUNCS
-int    	pa(t_stacks *stacks);
-int    	pb(t_stacks *stacks);
+int		pa(t_stacks *stacks);
+int		pb(t_stacks *stacks);
 
 //ROTATE FUNCS
 int 	ra(t_stacks *stacks);
@@ -58,4 +58,17 @@ int		rra(t_stacks *stacks);
 int 	rrb(t_stacks *stacks);
 int 	rrr(t_stacks *stacks);
 
+//COMPARE FUNCS
+int		is_smaller(int nb1, int nb2);
+
+//SORTING STACK
+int		sorting_stack(t_stacks *stacks);
+
+//PACKS
+int		my_sqrt(int nb_elements);
+int		nb_packs(int nb_elements);
+int		size_packs(int nb_elements);
+
+//COMPARE
+char *closer_number(t_stacks *stacks, int min, int max);
 #endif
