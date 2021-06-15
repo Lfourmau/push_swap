@@ -28,8 +28,9 @@ int run_bottom(t_onestack stack, int min, int max)
 	return (-1);
 }
 
-char *closer_number(t_stacks *stacks, int min, int max)
+int	closer_number(t_stacks *stacks, int min, int max)
 {
+	//find the closest side and do ra or rra X times to put the nb at the top
 	int top;
 	int bottom;
 	int i;
@@ -38,17 +39,17 @@ char *closer_number(t_stacks *stacks, int min, int max)
 	bottom = run_bottom(stacks->stack_a, min, max);
 	i = -1;
 	if (bottom == -1 || top == -1)
-		return ("NotFound");
+		return (1);
 	if (bottom < top)
 	{
 		while (++i <= bottom)
 			rra(stacks);
-		return ("bottom");
+		return (0);
 	}
 	else
 	{
 		while (++i < top)
 			ra(stacks);
-		return ("top");
+		return (0);
 	}
 }

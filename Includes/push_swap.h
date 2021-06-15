@@ -70,5 +70,6 @@ int		nb_packs(int nb_elements);
 int		size_packs(int nb_elements);
 
 //COMPARE
-char *closer_number(t_stacks *stacks, int min, int max);
+int	closer_number(t_stacks *stacks, int min, int max);
+int 	push_packs(t_stacks *stacks);
 #endif
