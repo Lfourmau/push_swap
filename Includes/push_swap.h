@@ -30,6 +30,8 @@ int		add_front_slot(t_onestack *stack, int value);
 int		del_front_value(t_onestack *stack);
 int		del_back_value(t_onestack *stack);
 int		add_back_slot(t_onestack *stack, int value);
+void	sort_tab(int *tab, int size);
+int		replace_values(t_onestack *stack);
 
 //MEMORY FUNCS
 void	free_splits(char **chain, int i);
@@ -61,11 +63,9 @@ int 	rrr(t_stacks *stacks);
 //COMPARE FUNCS
 int		is_smaller(int nb1, int nb2);
 
-//SORTING STACK
-int		sorting_stack(t_stacks *stacks);
-
 //PACKS
 int		my_sqrt(int nb_elements);
 int		nb_packs(int nb_elements);
-
+int		size_packs(int nb_elements);
+int		push_packs(t_stacks *stacks);
 #endif

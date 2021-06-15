@@ -14,3 +14,8 @@ int nb_packs(int nb_elements)
 {
     return (my_sqrt(nb_elements) / 2);
 }
+
+int size_packs(int nb_elements)
+{
+    return (nb_elements / nb_packs(nb_elements));
+}
