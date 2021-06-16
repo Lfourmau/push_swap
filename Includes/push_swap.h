@@ -68,5 +68,5 @@ int		my_sqrt(int nb_elements);
 int		nb_packs(int nb_elements);
 int		size_packs(int nb_elements);
 int		push_packs_to_b(t_stacks *stacks);
-int push_back_to_a(t_stacks *stacks);
+int 	push_back_to_a(t_stacks *stacks);
 #endif

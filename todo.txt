@@ -4,4 +4,8 @@ PROTECTION MALLOCS
 //////////////
 avec rr PARFOIS, la stack a quand elle est print avant b ne marche pas. La derniere valeur prend celle de la premiere mais rien ne se décale.
 //
-Malloc maxindex - 1 dans les del back -> pq le -1 ? On enleve juste une valeur donc juste maxindex car index = nb de val - 1?
+./push_swap 42 = flating point exeption jsp quoi
+////
+besoin de faire une verif pour voir si A est deja triée : peut permettre de gagner des opérations, et evite de tout push dans b si on est deja dans le bon ordre
+////
+traiter les cas 3 - 5 - 100 ect
