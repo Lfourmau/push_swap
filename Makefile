@@ -12,8 +12,9 @@ SRCS = 	srcs/main.c \
 		srcs/manip_array/manip_array.c \
 		srcs/reverse_rotate/reverse_rotate_fct.c \
 		srcs/algo/packs_calc.c \
-		srcs/algo/push_pack.c \
+		srcs/algo/push_packs_to_b.c \
 		srcs/algo/replace_values.c \
+		srcs/algo/push_back_to_a.c \
 
 
 OBJS = $(SRCS:.c=.o)
