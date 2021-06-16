@@ -51,3 +51,8 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+complexity
+README.md
+push_swap_visualizer
+pyviz.py

@@ -19,12 +19,24 @@ int bring_to_top(t_stacks *stacks)
 	int index;
 	int i;
 
-	i = 0;
 	index = found_index(stacks, stacks->stack_b.max_index);
-	while (i < index)
+	if (index < stacks->stack_b.max_index / 2)
 	{
-		rb(stacks);
-		i++;
+		i = 0;
+		while (i < index)
+		{
+			rb(stacks);
+			i++;
+		}
+	}
+	else
+	{
+		i = 0;
+		while (i <= stacks->stack_b.max_index - index)
+		{
+			rrb(stacks);
+			i++;
+		}
 	}
 	return (0);
 }
