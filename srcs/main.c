@@ -15,6 +15,8 @@ int	main(int argc, char **argv)
 		return (error());
 	if (replace_values(&stacks.stack_a))
 		return (error());
+	if (is_sorted(stacks.stack_a))
+		return (1);
 	push_packs_to_b(&stacks);
 	push_back_to_a(&stacks);
 	while (i <= stacks.stack_a.max_index)

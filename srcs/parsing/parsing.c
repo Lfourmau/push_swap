@@ -88,7 +88,6 @@ int	check_double(int argc, t_stacks *stacks, int start)
 
 int	parsing(int argc, char **argv, t_stacks *stacks)
 {
-	char	**tmp;
 	int		start;
 
 	start = 1;

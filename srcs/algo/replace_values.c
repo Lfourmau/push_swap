@@ -27,7 +27,7 @@ int replace_values(t_onestack *stack)
 {
 	int *sorted_tab;
 
-	sorted_tab = malloc(stack->max_index + 1);
+	sorted_tab = malloc((stack->max_index + 1) * sizeof(int));
 	if (sorted_tab == NULL)
 		return (1);
 	copy_tab(sorted_tab, stack, 0, 0);

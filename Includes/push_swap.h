@@ -62,6 +62,7 @@ int 	rrr(t_stacks *stacks);
 
 //COMPARE FUNCS
 int		is_smaller(int nb1, int nb2);
+int 	is_sorted(t_onestack stack);
 
 //PACKS
 int		my_sqrt(int nb_elements);

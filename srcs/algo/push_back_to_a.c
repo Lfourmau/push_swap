@@ -48,4 +48,5 @@ int push_back_to_a(t_stacks *stacks)
 		bring_to_top(stacks);
 		pa(stacks);
 	}
+	return (0);
 }

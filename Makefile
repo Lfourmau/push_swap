@@ -15,13 +15,14 @@ SRCS = 	srcs/main.c \
 		srcs/algo/push_packs_to_b.c \
 		srcs/algo/replace_values.c \
 		srcs/algo/push_back_to_a.c \
+		srcs/algo/check_order.c \
 
 
 OBJS = $(SRCS:.c=.o)
 
 LIBS = libft.a
 
-CFLAGS = #-Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address
 
 all : $(NAME)
 
