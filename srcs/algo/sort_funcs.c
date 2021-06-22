@@ -32,43 +32,43 @@ int	check_three_list_a(t_stacks *stacks)
 void	three_list_a(t_stacks *stacks)
 {
 	if (check_three_list_a(stacks) == 1)
-		sa(stacks);
+		sa(stacks, 1);
 	else if (check_three_list_a(stacks) == 2)
 	{
-		sa(stacks);
-		rra(stacks);
+		sa(stacks, 1);
+		rra(stacks, 1);
 	}
 	else if (check_three_list_a(stacks) == 3)
 	{
-		sa(stacks);
-		rra(stacks);
+		sa(stacks, 1);
+		rra(stacks, 1);
 	}
 	else if (check_three_list_a(stacks) == 4)
-		ra(stacks);
+		ra(stacks, 1);
 	else if (check_three_list_a(stacks) == 5)
 	{
-		sa(stacks);
-		ra(stacks);
+		sa(stacks, 1);
+		ra(stacks, 1);
 	}
 	else if (check_three_list_a(stacks) == 6)
-		rra(stacks);
+		rra(stacks, 1);
 }
 
 void	five_list_a(t_stacks *stacks)
 {
 	bring_top_a(stacks, 0, 0);
-	pb(stacks);
+	pb(stacks, 1);
 	bring_top_a(stacks, 1, 1);
-	pb(stacks);
+	pb(stacks, 1);
 	three_list_a(stacks);
 	if (stacks->stack_b.stack[0] < stacks->stack_b.stack[1])
-		sb(stacks);
-	pa(stacks);
-	pa(stacks);
+		sb(stacks, 1);
+	pa(stacks, 1);
+	pa(stacks, 1);
 }
 
 void	two_list_a(t_stacks *stacks)
 {
 	if (stacks->stack_a.stack[0] < stacks->stack_a.stack[1])
-		sb(stacks);
+		sb(stacks, 1);
 }

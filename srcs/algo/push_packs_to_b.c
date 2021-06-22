@@ -43,12 +43,12 @@ int	bring_top_a(t_stacks *stacks, int min, int max)
 	if (bottom < top)
 	{
 		while (++i <= bottom)
-			rra(stacks);
+			rra(stacks, 1);
 	}
 	else
 	{
 		while (++i < top)
-			ra(stacks);
+			ra(stacks, 1);
 	}
 	return (0);
 }
@@ -68,7 +68,7 @@ int	push_packs_to_b(t_stacks *stacks)
 	while (i <= nb_packs(nb_elements))
 	{
 		while (bring_top_a(stacks, min, max) != 1)
-			pb(stacks);
+			pb(stacks, 1);
 		min = max + 1;
 		max = min + size_packs(nb_elements);
 		i++;

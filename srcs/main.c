@@ -16,7 +16,10 @@ int	main(int argc, char **argv)
 	if (replace_values(&stacks.stack_a))
 		return (error(&stacks));
 	if (is_sorted(stacks.stack_a))
-		return (1);
+	{
+		free_exit(&stacks);
+		 return (1);
+	}
 	if (stacks.stack_a.max_index > 4)
 		big_list(&stacks);
 	else if (stacks.stack_a.max_index == 2)

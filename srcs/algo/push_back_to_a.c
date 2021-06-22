@@ -25,7 +25,7 @@ int	bring_to_top(t_stacks *stacks)
 		i = 0;
 		while (i < index)
 		{
-			rb(stacks);
+			rb(stacks, 1);
 			i++;
 		}
 	}
@@ -34,7 +34,7 @@ int	bring_to_top(t_stacks *stacks)
 		i = 0;
 		while (i <= stacks->stack_b.max_index - index)
 		{
-			rrb(stacks);
+			rrb(stacks, 1);
 			i++;
 		}
 	}
@@ -46,7 +46,7 @@ int	push_back_to_a(t_stacks *stacks)
 	while (stacks->stack_b.max_index >= 0)
 	{
 		bring_to_top(stacks);
-		pa(stacks);
+		pa(stacks, 1);
 	}
 	return (0);
 }

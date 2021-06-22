@@ -1,6 +1,6 @@
 #include "../../Includes/push_swap.h"
 
-void	sa(t_stacks *stacks)
+void	sa(t_stacks *stacks, int print)
 {
 	int	tmp;
 
@@ -10,10 +10,11 @@ void	sa(t_stacks *stacks)
 		stacks->stack_a.stack[0] = stacks->stack_a.stack[1];
 		stacks->stack_a.stack[1] = tmp;
 	}
-	printf("sa\n");
+	if (print == 1)
+		printf("sa\n");
 }
 
-void	sb(t_stacks *stacks)
+void	sb(t_stacks *stacks, int print)
 {
 	int	tmp;
 
@@ -23,12 +24,14 @@ void	sb(t_stacks *stacks)
 		stacks->stack_b.stack[0] = stacks->stack_b.stack[1];
 		stacks->stack_b.stack[1] = tmp;
 	}
-	printf("sb\n");
+	if (print == 1)
+		printf("sb\n");
 }
 
-void	ss(t_stacks *stacks)
+void	ss(t_stacks *stacks, int print)
 {
-	sa(stacks);
-	sb(stacks);
-	printf("ss\n");
+	sa(stacks, print);
+	sb(stacks, print);
+	if (print == 1)
+		printf("ss\n");
 }

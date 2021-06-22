@@ -42,23 +42,23 @@ void	stack_b_to_a(t_stacks *stacks);
 void	copy_tab(int *dest, t_onestack *stack, int start_dst, int start_src);
 
 //SWAP FUNCS
-void	sa(t_stacks *stacks);
-void	sb(t_stacks *stacks);
-void	ss(t_stacks *stacks);
+void	sa(t_stacks *stacks, int print);
+void	sb(t_stacks *stacks, int print);
+void	ss(t_stacks *stacks, int print);
 
 //PUSH FUNCS
-int		pa(t_stacks *stacks);
-int		pb(t_stacks *stacks);
+int		pa(t_stacks *stacks, int print);
+int		pb(t_stacks *stacks, int print);
 
 //ROTATE FUNCS
-int		ra(t_stacks *stacks);
-int		rb(t_stacks *stacks);
-int		rr(t_stacks *stacks);
+int		ra(t_stacks *stacks, int print);
+int		rb(t_stacks *stacks, int print);
+int		rr(t_stacks *stacks, int print);
 
 //REVERSE ROTATE FUNCS
-int		rra(t_stacks *stacks);
-int		rrb(t_stacks *stacks);
-int		rrr(t_stacks *stacks);
+int		rra(t_stacks *stacks, int print);
+int		rrb(t_stacks *stacks, int print);
+int		rrr(t_stacks *stacks, int print);
 
 //COMPARE FUNCS
 int		is_smaller(int nb1, int nb2);

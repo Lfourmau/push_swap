@@ -18,7 +18,6 @@ SRCS = 	srcs/main.c \
 		srcs/algo/check_order.c \
 		srcs/algo/sort_funcs.c \
 
-
 OBJS = $(SRCS:.c=.o)
 
 LIBS = libft.a

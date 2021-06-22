@@ -1,6 +1,6 @@
 #include "../../Includes/push_swap.h"
 
-int	pa(t_stacks *stacks)
+int	pa(t_stacks *stacks, int print)
 {
 	if (stacks->stack_b.max_index != -1)
 	{
@@ -8,12 +8,13 @@ int	pa(t_stacks *stacks)
 			return (1);
 		if (del_front_value(&stacks->stack_b))
 			return (1);
-		printf("pa\n");
+		if (print == 1)
+			printf("pa\n");
 	}
 	return (0);
 }
 
-int	pb(t_stacks *stacks)
+int	pb(t_stacks *stacks, int print)
 {
 	if (stacks->stack_a.max_index != -1)
 	{
@@ -21,7 +22,8 @@ int	pb(t_stacks *stacks)
 			return (1);
 		if (del_front_value(&stacks->stack_a))
 			return (1);
-		printf("pb\n");
+		if (print == 1)
+			printf("pb\n");
 	}
 	return (0);
 }
