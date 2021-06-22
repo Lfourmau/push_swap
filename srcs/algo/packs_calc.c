@@ -1,21 +1,21 @@
 #include "../../Includes/push_swap.h"
 
-int my_sqrt(int nb_elements)
+int	my_sqrt(int nb_elements)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (i * i < nb_elements)
-        i++;
-    return (i);
+	i = 0;
+	while (i * i < nb_elements)
+		i++;
+	return (i);
 }
 
-int nb_packs(int nb_elements)
+int	nb_packs(int nb_elements)
 {
-    return (my_sqrt(nb_elements) / 2);
+	return (my_sqrt(nb_elements) / 2);
 }
 
-int size_packs(int nb_elements)
+int	size_packs(int nb_elements)
 {
-    return (nb_elements / nb_packs(nb_elements));
+	return (nb_elements / nb_packs(nb_elements));
 }

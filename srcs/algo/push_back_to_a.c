@@ -1,23 +1,23 @@
 #include "../../Includes/push_swap.h"
 
-int found_index(t_stacks *stacks, int value)
+int	found_index(t_stacks *stacks, int value)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (i <= stacks->stack_b.max_index)
-    {
-        if (stacks->stack_b.stack[i] == value)
-            return (i);
-        i++;
-    }
-    return (-1);
+	i = 0;
+	while (i <= stacks->stack_b.max_index)
+	{
+		if (stacks->stack_b.stack[i] == value)
+			return (i);
+		i++;
+	}
+	return (-1);
 }
 
-int bring_to_top(t_stacks *stacks)
+int	bring_to_top(t_stacks *stacks)
 {
-	int index;
-	int i;
+	int	index;
+	int	i;
 
 	index = found_index(stacks, stacks->stack_b.max_index);
 	if (index < stacks->stack_b.max_index / 2)
@@ -41,7 +41,7 @@ int bring_to_top(t_stacks *stacks)
 	return (0);
 }
 
-int push_back_to_a(t_stacks *stacks)
+int	push_back_to_a(t_stacks *stacks)
 {
 	while (stacks->stack_b.max_index >= 0)
 	{

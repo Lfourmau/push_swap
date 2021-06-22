@@ -11,7 +11,7 @@ int	add_front_slot(t_onestack *stack, int value)
 	tmp[0] = value;
 	copy_tab(tmp, stack, 1, 0);
 	stack->max_index++;
-	//free(stack->stack);
+	free(stack->stack);
 	stack->stack = tmp;
 	return (0);
 }
@@ -26,7 +26,7 @@ int	add_back_slot(t_onestack *stack, int value)
 	tmp[stack->max_index + 1] = value;
 	copy_tab(tmp, stack, 0, 0);
 	stack->max_index++;
-	//free(stack->stack);
+	free(stack->stack);
 	stack->stack = tmp;
 	return (0);
 }
@@ -40,7 +40,7 @@ int	del_front_value(t_onestack *stack)
 		return (1);
 	copy_tab(tmp, stack, 0, 1);
 	stack->max_index--;
-	//free(stack->stack); sinon segfault quand on appelle RB apres RA dans le main
+	free(stack->stack);
 	stack->stack = tmp;
 	return (0);
 }
@@ -54,15 +54,15 @@ int	del_back_value(t_onestack *stack)
 		return (1);
 	stack->max_index--;
 	copy_tab(tmp, stack, 0, 0);
-	//free(stack->stack); sinon segfault quand on appelle RB apres RA dans le main
+	free(stack->stack);
 	stack->stack = tmp;
 	return (0);
 }
 
 void	sort_tab(int *tab, int size)
 {
-	int i;
-	int tmp;
+	int	i;
+	int	tmp;
 
 	i = 0;
 	size--;
