@@ -20,9 +20,9 @@ int	main(int argc, char **argv)
 	if (is_sorted(stacks.stack_a))
 	{
 		free_exit(&stacks);
-		return (1);
+		return (0);
 	}
-	if (stacks.stack_a.max_index > 4)
+	if (stacks.stack_a.max_index > 4 || stacks.stack_a.max_index == 3)
 		big_list(&stacks);
 	else if (stacks.stack_a.max_index == 1)
 		two_list_a(&stacks);
@@ -30,5 +30,5 @@ int	main(int argc, char **argv)
 		three_list_a(&stacks);
 	else if (stacks.stack_a.max_index == 4)
 		five_list_a(&stacks);
-	free_exit(&stacks);
+	return (free_exit(&stacks));
 }
