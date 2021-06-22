@@ -11,10 +11,10 @@ int	main(int argc, char **argv)
 {
 	t_stacks	stacks;
 
+	if (argc == 1)
+		return (1);
 	if (parsing(argc, argv, &stacks) == 1)
 		return (error(&stacks));
-	else if (parsing(argc, argv, &stacks) == 2)
-		return (1);
 	if (replace_values(&stacks.stack_a))
 		return (error(&stacks));
 	if (is_sorted(stacks.stack_a))

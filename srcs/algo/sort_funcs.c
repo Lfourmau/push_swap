@@ -9,7 +9,8 @@ void	big_list(t_stacks *stacks)
 int	check_three_list_a(t_stacks *stacks)
 {
 	if (stacks->stack_a.stack[0] > stacks->stack_a.stack[1]
-		&& stacks->stack_a.stack[1] < stacks->stack_a.stack[2] && stacks->stack_a.stack[2] > stacks->stack_a.stack[0])
+		&& stacks->stack_a.stack[1] < stacks->stack_a.stack[2]
+		&& stacks->stack_a.stack[2] > stacks->stack_a.stack[0])
 		return (1);
 	else if (stacks->stack_a.stack[0] > stacks->stack_a.stack[1]
 		&& stacks->stack_a.stack[1] > stacks->stack_a.stack[2])
@@ -18,13 +19,16 @@ int	check_three_list_a(t_stacks *stacks)
 		&& stacks->stack_a.stack[1] > stacks->stack_a.stack[2])
 		return (3);
 	else if (stacks->stack_a.stack[0] > stacks->stack_a.stack[1]
-		&& stacks->stack_a.stack[1] < stacks->stack_a.stack[2] && stacks->stack_a.stack[2] < stacks->stack_a.stack[0])
+		&& stacks->stack_a.stack[1] < stacks->stack_a.stack[2]
+		&& stacks->stack_a.stack[2] < stacks->stack_a.stack[0])
 		return (4);
 	else if (stacks->stack_a.stack[0] < stacks->stack_a.stack[1]
-		&& stacks->stack_a.stack[1] > stacks->stack_a.stack[2] && stacks->stack_a.stack[2] > stacks->stack_a.stack[0])
+		&& stacks->stack_a.stack[1] > stacks->stack_a.stack[2]
+		&& stacks->stack_a.stack[2] > stacks->stack_a.stack[0])
 		return (5);
 	else if (stacks->stack_a.stack[0] < stacks->stack_a.stack[1]
-		&& stacks->stack_a.stack[1] > stacks->stack_a.stack[2] && stacks->stack_a.stack[2] < stacks->stack_a.stack[0])
+		&& stacks->stack_a.stack[1] > stacks->stack_a.stack[2]
+		&& stacks->stack_a.stack[2] < stacks->stack_a.stack[0])
 		return (6);
 	return (0);
 }

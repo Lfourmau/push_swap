@@ -2,7 +2,8 @@
 
 int	rra(t_stacks *stacks, int print)
 {
-	if (add_front_slot(&stacks->stack_a, stacks->stack_a.stack[stacks->stack_a.max_index]))
+	if (add_front_slot(&stacks->stack_a, \
+	stacks->stack_a.stack[stacks->stack_a.max_index]))
 		return (1);
 	if (del_back_value(&stacks->stack_a))
 		return (1);
@@ -13,7 +14,8 @@ int	rra(t_stacks *stacks, int print)
 
 int	rrb(t_stacks *stacks, int print)
 {
-	if (add_front_slot(&stacks->stack_b, stacks->stack_b.stack[stacks->stack_b.max_index]))
+	if (add_front_slot(&stacks->stack_b, \
+	stacks->stack_b.stack[stacks->stack_b.max_index]))
 		return (1);
 	if (del_back_value(&stacks->stack_b))
 		return (1);

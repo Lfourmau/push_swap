@@ -21,7 +21,8 @@ int	run_bottom(t_onestack stack, int min, int max)
 	i = 0;
 	while (i <= stack.max_index)
 	{
-		if (stack.stack[stack.max_index - i] <= max && stack.stack[stack.max_index - i] >= min)
+		if (stack.stack[stack.max_index - i] <= max
+			&& stack.stack[stack.max_index - i] >= min)
 			return (i);
 		i++;
 	}
@@ -34,7 +35,6 @@ int	bring_top_a(t_stacks *stacks, int min, int max)
 	int	bottom;
 	int	i;
 
-	//find the closest side and do ra or rra X times to put the nb at the top
 	top = run_top(stacks->stack_a, min, max);
 	bottom = run_bottom(stacks->stack_a, min, max);
 	i = -1;
@@ -64,7 +64,6 @@ int	push_packs_to_b(t_stacks *stacks)
 	i = 1;
 	min = 0;
 	max = size_packs(nb_elements);
-	//printf("nb packs : %d -- size : %d\n\n", nb_packs(nb_elements), max);
 	while (i <= nb_packs(nb_elements))
 	{
 		while (bring_top_a(stacks, min, max) != 1)
