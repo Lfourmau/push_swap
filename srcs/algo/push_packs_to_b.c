@@ -62,7 +62,7 @@ int run_top(t_onestack stack, int min, int max)
      i = 1;
      min = 0;
      max = size_packs(nb_elements);
-	 printf("nb packs : %d -- size : %d\n\n", nb_packs(nb_elements), max);
+	 //printf("nb packs : %d -- size : %d\n\n", nb_packs(nb_elements), max);
      while (i <= nb_packs(nb_elements))
      {
 		while (bring_top_a(stacks, min, max) != 1)

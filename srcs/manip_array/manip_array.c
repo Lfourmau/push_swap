@@ -4,10 +4,8 @@ int	add_front_slot(t_onestack *stack, int value)
 {
 	int	*tmp;
 
-	printf("[%d]\n\n", stack->max_index);
 	//we add 2 -> 1 to have the number of values, note the index. 1 to have 1 value more for add.
 	tmp = malloc((stack->max_index + 2) * sizeof(int));
-	printf("ololo2\n\n");
 	if (tmp == NULL)
 		return (1);
 	tmp[0] = value;

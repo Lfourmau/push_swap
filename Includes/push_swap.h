@@ -70,4 +70,5 @@ int		nb_packs(int nb_elements);
 int		size_packs(int nb_elements);
 int		push_packs_to_b(t_stacks *stacks);
 int 	push_back_to_a(t_stacks *stacks);
+int	bring_top_a(t_stacks *stacks, int min, int max);
 #endif
