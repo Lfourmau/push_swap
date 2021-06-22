@@ -4,7 +4,6 @@ int	add_front_slot(t_onestack *stack, int value)
 {
 	int	*tmp;
 
-	//we add 2 -> 1 to have the number of values, note the index. 1 to have 1 value more for add.
 	tmp = malloc((stack->max_index + 2) * sizeof(int));
 	if (tmp == NULL)
 		return (1);
@@ -19,7 +18,7 @@ int	add_front_slot(t_onestack *stack, int value)
 int	add_back_slot(t_onestack *stack, int value)
 {
 	int	*tmp;
-	//we add 2 -> 1 to have the number of values, note the index. 1 to have 1 value more for add.
+
 	tmp = malloc((stack->max_index + 2) * sizeof(int));
 	if (tmp == NULL)
 		return (1);
@@ -48,7 +47,7 @@ int	del_front_value(t_onestack *stack)
 int	del_back_value(t_onestack *stack)
 {
 	int	*tmp;
-	//in this case, i decrémente maxindex BEFOR copy_tab because i don't want to copy the last value, it will be deleted.
+
 	tmp = malloc((stack->max_index) * sizeof(int));
 	if (tmp == NULL)
 		return (1);

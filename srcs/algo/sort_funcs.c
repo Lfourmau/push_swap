@@ -69,6 +69,6 @@ void	five_list_a(t_stacks *stacks)
 
 void	two_list_a(t_stacks *stacks)
 {
-	if (stacks->stack_a.stack[0] < stacks->stack_a.stack[1])
-		sb(stacks, 1);
+	if (stacks->stack_a.stack[0] > stacks->stack_a.stack[1])
+		sa(stacks, 1);
 }
