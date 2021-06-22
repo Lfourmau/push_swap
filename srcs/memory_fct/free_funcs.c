@@ -11,6 +11,5 @@ int	free_exit(t_stacks *stacks)
 {
 	free(stacks->stack_a.stack);
 	free(stacks->stack_b.stack);
-	free(stacks);
 	return (0);
 }

@@ -1,7 +1,8 @@
 #include "../Includes/push_swap.h"
 
-int	error(void)
+int	error(t_stacks *stacks)
 {
+	free_exit(stacks);
 	printf("Error\n");
 	return (1);
 }
@@ -9,12 +10,11 @@ int	error(void)
 int	main(int argc, char **argv)
 {
 	t_stacks	stacks;
-	int			i = 0;
 
 	if (parsing(argc, argv, &stacks))
-		return (error());
+		return (error(&stacks));
 	if (replace_values(&stacks.stack_a))
-		return (error());
+		return (error(&stacks));
 	if (is_sorted(stacks.stack_a))
 		return (1);
 	if (stacks.stack_a.max_index > 4)
@@ -23,10 +23,5 @@ int	main(int argc, char **argv)
 		three_list_a(&stacks);
 	else if (stacks.stack_a.max_index == 4)
 		five_list_a(&stacks);
-	while (i <= stacks.stack_a.max_index)
-	{
-		printf("%d\n", stacks.stack_a.stack[i]);
-		i++;
-	}
-	//free_exit(&stacks);
+	free_exit(&stacks);
 }

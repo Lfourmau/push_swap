@@ -33,5 +33,6 @@ int	replace_values(t_onestack *stack)
 	copy_tab(sorted_tab, stack, 0, 0);
 	sort_tab(sorted_tab, stack->max_index + 1);
 	replace(stack, sorted_tab);
+	free(sorted_tab);
 	return (0);
 }
